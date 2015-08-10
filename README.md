@@ -1,6 +1,6 @@
 # jlib
     我们看看jlib是如何把js变强大的，废话少说，请下看！
-    **Map**
+**Map**
 > var map = new Map();
 
 `map.put(k, v);//存放键值对`
