@@ -84,5 +84,5 @@
 
 `sessionstor.clear()//清理缓存`
 
-
-
+**getSearch**
+>var getsearch = new getSearch();//返回Object键值对

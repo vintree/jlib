@@ -18,7 +18,7 @@ var gulp = require('gulp'),
 var defaults = ['clean', 'html', 'javescript'];
 
 gulp.task('html', function() {
-  gulp.src('*.html')
+  gulp.src('html/**/*.html')
     .pipe(rev())
     .pipe(gulp.dest('dist/html'))
     .pipe(notify({ message: 'html finish' }));
