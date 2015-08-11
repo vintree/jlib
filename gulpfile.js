@@ -25,10 +25,10 @@ gulp.task('html', function() {
 });
 
 gulp.task('javescript', function() {
+//	 pipe(concat('jlib.js'))
   gulp.src('js/lib/*.js')
     .pipe(jshint('.jshintrc'))
     .pipe(jshint.reporter('default'))
-    .pipe(concat('lib.js'))
     .pipe(gulp.dest('dist/js/lib'))
     .pipe(rename({ suffix: '.min' }))
     .pipe(uglify())
