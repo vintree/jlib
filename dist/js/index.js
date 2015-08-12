@@ -42,8 +42,37 @@ var list = [100,200,300,400,20000,500,300,200,900];
 //   return theRequest;
 //}
 //console.log(GetRequest());
-var s = new getSearch();
-console.log(s);
+
+//var localstor = new Localstor();
+//console.log('---Localstor---持久缓存')
+//console.log('设置：' + localstor.set('jlib', 512));
+//console.log('得到：' + localstor.get('jlib'));
+//console.log('删除：' + localstor.remove('jlib'));
+//console.log('清空：' + localstor.clear());
+//console.log('\n');
+//
+//
+//var sessionstor = new Sessionstor();
+//console.log('---Sessionstor---会话缓存')
+//console.log('设置：' + sessionstor.set('jlib', 1024));
+//console.log('得到：' + sessionstor.get('jlib'));
+//console.log('删除：' + sessionstor.remove('jlib'));
+//console.log('清空：' + sessionstor.clear());
+//console.log('\n');
+//
+//
+//var getsearch = new getSearch();
+//console.log('---getSearch---查询url');
+//console.log('url参数对象：');
+//console.log(getsearch);
+//console.log('\n');
+//
+//var verify = new Verify();
+//console.log('---Verify---验证');
+//console.log('验证数字：' + verify.number(1024));
+//console.log('验证手机号：' + verify.mobile(13877442211));
+//console.log('验证E-mail：' + verify.email('co_wgz@jlib.com'));
+//console.log('\n');
 
 
 

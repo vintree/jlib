@@ -47,11 +47,6 @@
 		return l;
 	}
 
-	//得到JSON对象
-	Map.prototype.toJson = function() {
-		return JSON.parse(JSON.stringify(this.c));
-	}
-
 	//得到Map长度
 	Map.prototype.size = function() {
 		var s = 0;
@@ -154,7 +149,7 @@
   //---------错误结果----------------
   function Error(){};
   Error.prototype.init = function(o) {
-    if(o === null || o === undefined || o === NaN || o.length === 0 || o === 0 ){
+    if(o === null || o === undefined || isNaN(o) || o.length === 0 || o === 0 ){
       return undefined;
     }
     return true;
@@ -212,7 +207,7 @@
     return false;
   }
   
-  //---------永久缓存--------------------
+  //---------持久缓存--------------------
   function Localstor() {};
   //判断浏览器是否支持缓存
   Localstor.prototype.init = function() {
@@ -247,7 +242,7 @@
   function Sessionstor() {};
   //判断浏览器是否支持缓存
   Sessionstor.prototype.init = function() {
-    if(('sessionStorage' in window) && window['sessionStorage'] != null) {
+    if( !('sessionStorage' in window) && window['sessionStorage'] != null) {
       console.log("该浏览器不支持，会话离线缓存支持");
       return false;
     }
@@ -289,11 +284,25 @@
      return o;
   }
 
-  
-
-
-
-
+  //--------验证-------------------------------
+  function Verify() {};
+  //仓库
+  Verify.prototype.init = function(s, r) {
+    if(r.test(s)) return true;
+    return false;
+  }
+  //数字
+  Verify.prototype.number = function(s) {
+    return this.init(s, /^[0-9]*$/);
+  }
+  //手机
+  Verify.prototype.mobile = function(s) {
+    return this.init(s, /^1\d{10}$/);
+  }
+  //email
+  Verify.prototype.email = function(s) {
+    return this.init(s, /^[a-zA-Z0-9_-]+@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)+$/);
+  }
 
 
 

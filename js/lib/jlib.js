@@ -47,11 +47,6 @@
 		return l;
 	}
 
-	//得到JSON对象
-	Map.prototype.toJson = function() {
-		return JSON.parse(JSON.stringify(this.c));
-	}
-
 	//得到Map长度
 	Map.prototype.size = function() {
 		var s = 0;
